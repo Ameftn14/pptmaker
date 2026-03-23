@@ -146,7 +146,7 @@ def two_col_slide(title, left_items, right_items, left_head="", right_head=""):
 def title_slide_centered(title, subtitle=""):
     """Full-screen centered title with large accent circle behind text."""
     slide = prs.slides.add_slide(blank_layout)
-    set_bg(slide, WHITE)
+    set_bg(slide, BG)
     # large decorative circle
     from pptx.enum.shapes import MSO_SHAPE
     circle = slide.shapes.add_shape(MSO_SHAPE.OVAL, Inches(4.2), Inches(1.0), Inches(5), Inches(5))
@@ -355,7 +355,7 @@ def two_col_slide_boxed(title, left_items, right_items, left_head="", right_head
 def quote_slide(text, attribution=""):
     """Large centered quote with optional attribution."""
     slide = prs.slides.add_slide(blank_layout)
-    set_bg(slide, WHITE)
+    set_bg(slide, BG)
     add_rect(slide, Inches(2), Inches(1.5), Inches(0.08), Inches(4.5), ACCENT)
     add_text(slide, '"', Inches(1.5), Inches(1.2), Inches(1), Inches(1),
              size=72, bold=True, color=RGBColor(0xDB, 0xEE, 0xF9))

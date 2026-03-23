@@ -1,0 +1,64 @@
+{
+    "output": "example/example.pptx",
+    "slides": [
+        {
+            "type": "title",
+            "title": "Presentation Title",
+            "subtitle": "Optional subtitle"
+        },
+        {
+            "type": "section",
+            "title": "Section Title"
+        },
+        {
+            "type": "content",
+            "title": "Slide Title",
+            "bullets": [
+                [
+                    0,
+                    "Main bullet"
+                ],
+                [
+                    1,
+                    "Sub-bullet"
+                ],
+                [
+                    0,
+                    "Another main bullet"
+                ],
+                [
+                    1,
+                    "Another sub-bullet"
+                ],
+                [
+                    1,
+                    "Yet another sub-bullet"
+                ]
+            ]
+        },
+        {
+            "type": "two_col",
+            "title": "Comparison",
+            "left_head": "Left Header",
+            "right_head": "Right Header",
+            "left": [
+                "Item 1",
+                "Item 2"
+            ],
+            "right": [
+                "Item A",
+                "Item B"
+            ]
+        },
+        {
+            "type": "quote",
+            "text": "Some insightful quote here.",
+            "attribution": "Author Name"
+        },
+        {
+            "type": "title_centered",
+            "title": "Thanks",
+            "subtitle": "Ame"
+        }
+    ]
+}

@@ -25,11 +25,18 @@ python make_ppt.py [-h] [-i INPUT] [-o OUTPUT]
       "subtitle": "Optional subtitle"
     },
     {
+        "type": "section",
+        "title": "Section Title"
+    },
+    {
       "type": "content",
       "title": "Slide Title",
       "bullets": [
         [0, "Main bullet"],
-        [1, "Sub-bullet"]
+        [1, "Sub-bullet"],
+        [0, "Another main bullet"],
+        [1, "Another sub-bullet"],
+        [1, "Yet another sub-bullet"]
       ]
     },
     {
@@ -46,10 +53,9 @@ python make_ppt.py [-h] [-i INPUT] [-o OUTPUT]
       "attribution": "Author Name"
     },
     {
-      "type": "big_number",
-      "number": "42",
-      "label": "Papers Surveyed",
-      "description": "Optional extra context"
+      "type": "title_centered",
+      "title": "Thanks",
+      "subtitle": "Ame"
     }
   ]
 }
