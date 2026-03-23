@@ -15,6 +15,10 @@ python make_ppt.py [-h] [-i INPUT] [-o OUTPUT]
 
 ## JSON Format Example
 
+you can use AI to generate the `content.json` file by providing the readme to it.
+
+The JSON file should have the following structure:
+
 ```json
 {
   "output": "path/to/output.pptx",
