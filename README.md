@@ -7,7 +7,53 @@ Generate `.pptx` presentations from a `content.json` file.
 ```bash
 python make_ppt.py [-h] [-i INPUT] [-o OUTPUT]
 ```
-json format as follow
+
+## Dependencies
+- `python-pptx` for PowerPoint generation
+- `argparse` for command-line argument parsing
+- `json` for reading the input file
+
+## JSON Format Example
+
+```json
+{
+  "output": "path/to/output.pptx",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Presentation Title",
+      "subtitle": "Optional subtitle"
+    },
+    {
+      "type": "content",
+      "title": "Slide Title",
+      "bullets": [
+        [0, "Main bullet"],
+        [1, "Sub-bullet"]
+      ]
+    },
+    {
+      "type": "two_col",
+      "title": "Comparison",
+      "left_head": "Left Header",
+      "right_head": "Right Header",
+      "left": ["Item 1", "Item 2"],
+      "right": ["Item A", "Item B"]
+    },
+    {
+      "type": "quote",
+      "text": "Some insightful quote here.",
+      "attribution": "Author Name"
+    },
+    {
+      "type": "big_number",
+      "number": "42",
+      "label": "Papers Surveyed",
+      "description": "Optional extra context"
+    }
+  ]
+}
+```
 
 ## Available Slide Types
 
@@ -50,48 +96,6 @@ json format as follow
 | `quote`      | `text`, `attribution`                             | Large centered quote with attribution |
 | `three_col`  | `col1`, `col2`, `col3`, `head1`, `head2`, `head3` | Three equal columns                   |
 | `big_number` | `number`, `label`, `description`                  | Hero stat slide with large number     |
-
-## JSON Format
-
-```json
-{
-  "output": "path/to/output.pptx",
-  "slides": [
-    {
-      "type": "title",
-      "title": "Presentation Title",
-      "subtitle": "Optional subtitle"
-    },
-    {
-      "type": "content",
-      "title": "Slide Title",
-      "bullets": [
-        [0, "Main bullet"],
-        [1, "Sub-bullet"]
-      ]
-    },
-    {
-      "type": "two_col",
-      "title": "Comparison",
-      "left_head": "Left Header",
-      "right_head": "Right Header",
-      "left": ["Item 1", "Item 2"],
-      "right": ["Item A", "Item B"]
-    },
-    {
-      "type": "quote",
-      "text": "Some insightful quote here.",
-      "attribution": "Author Name"
-    },
-    {
-      "type": "big_number",
-      "number": "42",
-      "label": "Papers Surveyed",
-      "description": "Optional extra context"
-    }
-  ]
-}
-```
 
 ## Bullet Levels
 
